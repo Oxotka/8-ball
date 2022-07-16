@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,32 +13,59 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="O3o-m9-5gK">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="O3o-m9-5gK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="2Ld-qo-oox">
-                                <rect key="frame" x="13" y="203" width="402" height="441"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Узнай, что тебя ждет" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYd-Ta-VFw">
-                                <rect key="frame" x="131" y="332" width="166" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="19"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6j-yS-zMV">
+                                <rect key="frame" x="0.0" y="161" width="414" height="414"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="2Ld-qo-oox">
+                                        <rect key="frame" x="18" y="0.0" width="378" height="414"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="378" id="4Qc-T4-zU8"/>
+                                            <constraint firstAttribute="height" constant="414" id="f28-zA-9cs"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Узнай, что тебя ждет" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYd-Ta-VFw">
+                                        <rect key="frame" x="132" y="152" width="150" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="7ea-Xa-aYB"/>
+                                            <constraint firstAttribute="width" constant="150" id="oCF-N3-omd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="19"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ZYd-Ta-VFw" secondAttribute="bottom" constant="212" id="BIL-Sf-NO0"/>
+                                    <constraint firstItem="2Ld-qo-oox" firstAttribute="centerY" secondItem="P6j-yS-zMV" secondAttribute="centerY" id="N9X-XD-VTu"/>
+                                    <constraint firstItem="2Ld-qo-oox" firstAttribute="centerX" secondItem="P6j-yS-zMV" secondAttribute="centerX" id="RJx-VZ-yi1"/>
+                                    <constraint firstItem="ZYd-Ta-VFw" firstAttribute="centerX" secondItem="P6j-yS-zMV" secondAttribute="centerX" id="kUg-3K-wiM"/>
+                                    <constraint firstAttribute="height" constant="414" id="rA5-GU-4yA"/>
+                                    <constraint firstItem="ZYd-Ta-VFw" firstAttribute="top" secondItem="P6j-yS-zMV" secondAttribute="top" constant="152" id="sQ9-tl-Kmt"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P6j-yS-zMV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1iO-Kh-BMr"/>
+                            <constraint firstItem="O3o-m9-5gK" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="Ecc-Qs-Vi9"/>
+                            <constraint firstItem="P6j-yS-zMV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="NPw-dc-lQc"/>
+                            <constraint firstItem="O3o-m9-5gK" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="SwO-na-at0"/>
+                            <constraint firstItem="O3o-m9-5gK" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="UQ4-oK-fRv"/>
+                            <constraint firstAttribute="bottom" secondItem="O3o-m9-5gK" secondAttribute="bottom" id="ocy-d7-o6T"/>
+                            <constraint firstItem="P6j-yS-zMV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sEM-9P-nqh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="50.724637681159422" y="373.66071428571428"/>
         </scene>
     </scenes>
     <resources>
